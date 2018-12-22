@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Web App</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+</head>
+<body>
+  <h1>Spotify Web App</h1>
+  <h2>Authentication below:</h2>
+
+  <form action="https://accounts.spotify.com/en/authorize" id="get-access-token">
+    <input type="hidden" name="response_type" value="token" />
+    <input type="hidden" name="client_id" value="ENTERYOURSPOTIFYAPPIDHERE" />
+    <input type="hidden" name="redirect_uri" value="http://spotify-web-app.s3-website.us-east-2.amazonaws.com/" />
+    <input type="hidden" name="scope" value="user-read-playback-state" />
+  
+    <button type="submit" class="">Please authenticate with Spotify</button>
+  </form>
+
+  <h3 id="spotify-song">Song here</h3>
+  <button id="button"></button>
+
+  <form role="search" id="search">
+    <input type="search" id="wikipedia-link" placeholder="Artist Name" name="artist">
+    <button>Search</button>
+  </form>
+
+</body>
+<script src="js/wikipedia-api.js"></script>
+<script src="js/spotify-logic.js"></script>
+</html>
